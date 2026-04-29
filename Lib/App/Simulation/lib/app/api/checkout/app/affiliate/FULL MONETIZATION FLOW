@@ -1,0 +1,14 @@
+User signs up
+ → enters referral code (optional)
+ → gets grant or discount
+
+IF grant:
+ → free access
+
+ELSE:
+ → payment required (Stripe)
+
+User completes course
+ → gets certificate
+ → refers others
+ → earns rewards
