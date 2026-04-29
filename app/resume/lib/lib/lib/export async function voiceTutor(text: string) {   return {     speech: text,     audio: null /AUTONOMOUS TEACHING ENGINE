@@ -1,0 +1,19 @@
+export async function autoTeacher(student: any) {
+  const res = await ai.generate({
+    prompt: `
+You are an adaptive AI instructor inside a full digital academy.
+
+Student level: ${student.level}
+Current course: ${student.course}
+Weak areas: ${student.weaknesses}
+
+Generate:
+1. Lesson explanation
+2. Example scenario
+3. Mini quiz
+4. Next lesson recommendation
+    `,
+  });
+
+  return res.text;
+}
