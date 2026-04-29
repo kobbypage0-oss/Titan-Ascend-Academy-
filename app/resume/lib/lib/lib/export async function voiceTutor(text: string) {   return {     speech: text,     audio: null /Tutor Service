@@ -1,0 +1,8 @@
+export async function tutor(prompt: string) {
+  return fetch("/api/ai", {
+    method: "POST",
+    body: JSON.stringify({
+      prompt: `You are an expert instructor: ${prompt}`
+    })
+  }).then(r => r.json());
+}
