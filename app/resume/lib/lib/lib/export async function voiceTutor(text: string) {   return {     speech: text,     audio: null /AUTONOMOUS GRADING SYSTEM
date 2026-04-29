@@ -1,0 +1,19 @@
+export async function autoGrader(answer: string) {
+  const res = await ai.generate({
+    prompt: `
+You are an academic grading system.
+
+Score this answer 0–100:
+
+${answer}
+
+Return:
+- Score
+- What was correct
+- What was wrong
+- Improvement steps
+    `,
+  });
+
+  return res.text;
+}
