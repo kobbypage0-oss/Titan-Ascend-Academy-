@@ -1,0 +1,24 @@
+export async function employerAI(student: any, jobs: any[]) {
+  const res = await ai.generate({
+    prompt: `
+You are a job placement AI.
+
+Match this student:
+
+Skills: ${student.skills}
+Certifications: ${student.certs}
+Score: ${student.score}
+
+To best jobs:
+
+${JSON.stringify(jobs)}
+
+Return:
+- best matches
+- probability of hire
+- recommended applications
+    `,
+  });
+
+  return res.text;
+}
