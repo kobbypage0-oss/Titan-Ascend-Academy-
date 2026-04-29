@@ -1,0 +1,30 @@
+titan-ascend-academy/
+│
+├── app/
+│   ├── page.tsx
+│   ├── dashboard/
+│   │   └── page.tsx
+│   ├── courses/
+│   │   └── page.tsx
+│   ├── simulation/
+│   │   └── page.tsx
+│   └── certificates/
+│       └── page.tsx
+│
+├── lib/
+│   ├── firebase.ts
+│   └── ai.ts
+│
+├── components/
+│   ├── Navbar.tsx
+│   ├── CourseCard.tsx
+│   └── ProgressBar.tsx
+│
+├── public/
+│
+├── styles/
+│
+├── package.json
+├── tsconfig.json
+├── next.config.js
+└── README.md
