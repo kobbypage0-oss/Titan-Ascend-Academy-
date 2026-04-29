@@ -1,0 +1,24 @@
+User signs up
+ → Firebase Auth
+ → dashboard loads
+
+User learns course
+ → AI tutor assists
+
+User completes simulation
+ → AI grades instantly
+
+Clinical hours logged
+ → Firestore stores data
+
+Supervisor approves
+ → certification issued
+
+AI engine:
+ → builds resume
+ → matches jobs
+ → suggests employers
+
+Employer:
+ → views candidates
+ → hires directly
