@@ -1,0 +1,3 @@
+export function generateReferralCode(uid: string) {
+  return uid.slice(0, 5).toUpperCase();
+}
