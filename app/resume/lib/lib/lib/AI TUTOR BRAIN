@@ -1,0 +1,17 @@
+export async function tutorBrain(question: string) {
+  const res = await ai.generate({
+    prompt: `
+You are a world-class instructor inside Titan Ascend Academy.
+
+Explain this in simple steps:
+${question}
+
+Make it:
+- clear
+- structured
+- beginner friendly
+    `,
+  });
+
+  return res.text;
+}
