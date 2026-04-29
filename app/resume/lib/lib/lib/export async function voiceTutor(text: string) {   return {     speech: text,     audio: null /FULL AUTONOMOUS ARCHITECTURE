@@ -1,0 +1,10 @@
+┌──────────────────────┐
+                │  AI SCHOOL BRAIN     │
+                │  (Genkit Orchestrator)│
+                └─────────┬────────────┘
+                          ↓
+ ┌──────────────┬──────────────┬──────────────┬──────────────┐
+ │ Teaching AI  │ Grading AI   │ Scheduler AI │ Job AI       │
+ └──────┬───────┴──────┬───────┴──────┬──────┴──────┬───────┘
+        ↓              ↓              ↓             ↓
+   Lessons DB     Scores DB     Calendar DB   Employer DB
