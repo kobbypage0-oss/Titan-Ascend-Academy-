@@ -1,0 +1,29 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { coachBrain } from "@/lib/ai";
+
+export default function Coach() {
+  const [advice, setAdvice] = useState("");
+
+  useEffect(() => {
+    async function run() {
+      const res = await coachBrain({
+        skills: ["Patient Care"],
+        progress: "60%",
+        weaknesses: "Anatomy"
+      });
+
+      setAdvice(res);
+    }
+
+    run();
+  }, []);
+
+  return (
+    <div>
+      <h2>AI Coach</h2>
+      <p>{advice}</p>
+    </div>
+  );
+}
