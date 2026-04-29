@@ -1,0 +1,19 @@
+export async function coachBrain(student: any) {
+  const res = await ai.generate({
+    prompt: `
+You are a career coach.
+
+Student data:
+- Skills: ${student.skills}
+- Progress: ${student.progress}
+- Weak areas: ${student.weaknesses}
+
+Give:
+1. What to study next
+2. What to fix
+3. Motivation message
+    `,
+  });
+
+  return res.text;
+}
