@@ -1,0 +1,9 @@
+const pay = async () => {
+  const res = await fetch("/api/checkout", {
+    method: "POST",
+    body: JSON.stringify({ price: 199 }),
+  });
+
+  const data = await res.json();
+  window.location.href = data.url;
+};
