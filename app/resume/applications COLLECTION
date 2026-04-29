@@ -1,0 +1,6 @@
+{
+  "userId": "",
+  "jobId": "",
+  "status": "pending | accepted | rejected",
+  "appliedAt": ""
+}
