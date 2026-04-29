@@ -1,0 +1,28 @@
+import { useEffect, useState } from "react";
+import { auth } from "@/lib/firebase";
+import { getUserRole } from "@/lib/auth";
+
+export default function SupervisorPage() {
+  const [allowed, setAllowed] = useState(false);
+
+  useEffect(() => {
+    const user = auth.currentUser;
+
+    if (!user) {
+      window.location.href = "/login";
+      return;
+    }
+
+    getUserRole(user.uid).then(role => {
+      if (role === "supervisor" || role === "admin") {
+        setAllowed(true);
+      } else {
+        window.location.href = "/";
+      }
+    });
+  }, []);
+
+  if (!allowed) return <p>Checking permissions...</p>;
+
+  return <div>Supervisor Content</div>;
+}
