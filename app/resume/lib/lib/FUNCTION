@@ -1,0 +1,9 @@
+export async function autoApply(student: any, jobs: any[]) {
+  for (let job of jobs) {
+    const matchScore = smartMatch(student, job);
+
+    if (matchScore > 80) {
+      await applyToJob(student.uid, job.id);
+    }
+  }
+}
