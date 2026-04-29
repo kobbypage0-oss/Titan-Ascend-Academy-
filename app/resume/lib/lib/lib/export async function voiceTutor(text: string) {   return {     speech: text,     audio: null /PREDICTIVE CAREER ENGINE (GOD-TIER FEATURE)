@@ -1,0 +1,21 @@
+export async function careerPredictor(student: any) {
+  const res = await ai.generate({
+    prompt: `
+You are a workforce prediction AI.
+
+Predict best career path based on:
+
+Skills: ${student.skills}
+Performance: ${student.score}
+Clinical hours: ${student.hours}
+
+Return:
+1. Best career match
+2. Salary potential
+3. Next 3 certifications needed
+4. Job probability score (0-100)
+    `,
+  });
+
+  return res.text;
+}
