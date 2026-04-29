@@ -1,0 +1,20 @@
+export async function schedulerAI(student: any) {
+  const res = await ai.generate({
+    prompt: `
+You are an academic scheduler.
+
+Create a weekly plan for:
+
+Courses: ${student.courses}
+Available hours per day: ${student.hours}
+
+Include:
+- Study sessions
+- Simulation practice
+- Clinical tracking time
+- Review days
+    `,
+  });
+
+  return res.text;
+}
